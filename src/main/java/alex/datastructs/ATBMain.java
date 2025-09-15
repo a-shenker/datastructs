@@ -81,7 +81,6 @@ public class ATBMain {
                 final double avgLag = totalNanos.addAndGet(lag)/numEvents.incrementAndGet();
                 log.info("Consuming item {} of {}:  {} lag {}, avg lag {}, max lag {} nanos for {} events", i, count, wm, lag, avgLag, maxLag, numEvents.get());
             });
-        Thread.sleep(20);
       } catch (final TimeoutException | InterruptedException e) {
         log.error("Failed to consume  weather", e);
       }

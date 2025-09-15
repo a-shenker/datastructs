@@ -38,7 +38,7 @@ public class AggregatingTransferBufferFAST<T> implements AggregatingTransferBuff
     final long timeT = _clock.millis();
     @Nullable T transfer = datum;
     while (transfer != null) {
-      acquire(_semaphore, _maxProducerWait, timeT);;
+      acquire(_semaphore, _maxProducerWait, timeT);
       try {
         checkTimeout(_maxProducerWait, timeT);
         if (_storage.size() < _maxProducerBacklog) {
