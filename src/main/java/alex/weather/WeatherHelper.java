@@ -9,7 +9,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class WeatherHelper {
-  private static final String WEATHER_API_KEY = "";
+  private static final String WEATHER_API_KEY = "a9fdc9fd7639dc8b70fc8d326cbffdb0";
   private static final String URL_BASE = "http://api.openweathermap.org/data/2.5/weather";
   private final HttpClient _client = HttpClient.newHttpClient();
   private final ObjectMapper _mapper = new ObjectMapper();
